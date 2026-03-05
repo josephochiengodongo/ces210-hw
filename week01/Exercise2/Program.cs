@@ -11,7 +11,7 @@ class Program
         Console.WriteLine("What is your grade percentage? ");
         string answer =Console.ReadLine();
         int percent = int.Parse(answer);
-
+        string sign = "";
         string letter = "";
 
         if (percent >= 90)
@@ -36,9 +36,8 @@ class Program
         }
 
         //strech challege: determine + 
-        string sign = "";
 
-        int lastDigit =grade % 10;
+        int lastDigit =percent % 10; 
 
         if (lastDigit >= 7)
         {
