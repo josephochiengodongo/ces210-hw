@@ -61,7 +61,7 @@ class Program
             sign = "F"; //no F+ and F-
         }
 
-        Console.WriteLine($"Your grade is:{letter} {sign}");
+        Console.WriteLine($"Your grade is:{letter}{sign}");
         if (percent >= 70)
         {
             Console.WriteLine("You passed");
