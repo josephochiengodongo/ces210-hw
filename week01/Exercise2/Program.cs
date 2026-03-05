@@ -1,4 +1,7 @@
 using System;
+using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
 class Program
 {
@@ -8,7 +11,6 @@ class Program
         Console.WriteLine("What is your grade percentage? ");
         string answer =Console.ReadLine();
         int percent = int.Parse(answer);
-
 
         string letter = "";
 
@@ -32,6 +34,33 @@ class Program
         {
             letter="F";
         }
+
+        //strech challege: determine + and -
+        string sign = "";
+        int lastDigit =percent % 10;
+
+        if (lastDigit >=7)
+        {
+            sign = "+";
+        }
+        else if (lastDigit <3)
+        {
+            sign = "-";
+        }
+        else
+        {
+            sign = "";
+        }
+        //strech challange:exception F+,F- and A+
+        if (letter == "A" && sign == "+")
+        {
+            sign = "";//no A+
+        }
+        else if (letter == "F")
+        {
+            sign = "F"; //no F+ and F-
+        }
+
         Console.WriteLine($"Your grade is:{letter}");
         if (percent >= 70)
         {
@@ -39,7 +68,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("Better luck next time")
+            Console.WriteLine("Better luck next time");
         }
     
         
