@@ -38,7 +38,7 @@ class Program
         //strech challege: determine + 
         string sign = "";
 
-        int lastDigit =grade % 10;
+        int lastDigit =percent % 10;
 
         if (lastDigit >= 7)
         {
