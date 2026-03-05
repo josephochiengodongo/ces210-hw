@@ -13,7 +13,7 @@ class Program
         int percent = int.Parse(answer);
 
         string sign = ""; 
-        
+
         string letter = "";
 
         if (percent >= 90)
@@ -37,7 +37,7 @@ class Program
             letter="F";
         }
 
-        //strech challege: determine "+" and "-"
+        //strech challege: determine "+" and "-" sign
 
         int lastDigit =percent % 10; 
 
