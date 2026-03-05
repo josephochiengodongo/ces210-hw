@@ -10,23 +10,24 @@ class Program
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
         Console.WriteLine("What is your grade percentage? ");
         string answer =Console.ReadLine();
-        int grade = int.Parse(answer);
+        int percent = int.Parse(answer);
+
         string sign = "";
         string letter = "";
 
-        if (grade >= 90)
+        if (percent >= 90)
         {
             letter = "A";
         }
-        else if (grade >= 80)
+        else if (percent >= 80)
         {
             letter="B";
         }
-        else if (grade >=70)
+        else if (percent >=70)
         {
             letter="C";
         }
-        else if (grade >=60)
+        else if (percent >=60)
         {
             letter="D";
         }
@@ -37,7 +38,7 @@ class Program
 
         //strech challege: determine + 
 
-        int lastDigit =grade % 10; 
+        int lastDigit =percent % 10; 
 
         if (lastDigit >= 7)
         {
@@ -62,7 +63,7 @@ class Program
         }
 
         Console.WriteLine($"Your grade is: {letter}{sign}");
-        if (grade >= 70)
+        if (percent >= 70)
         {
             Console.WriteLine("You passed");
         }
