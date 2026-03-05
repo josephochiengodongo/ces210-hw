@@ -41,15 +41,15 @@ class Program
 
         if (lastDigit >= 7)
         {
-            sign ="+";
+            sign = "+";
         }
         else if (lastDigit <3)
         {
-            sign ="-";
+            sign = "-";
         }
         else
         {
-            sign ="";
+            sign = "";
         }
         //strech challange:exception F+,F- and A+
         if (letter == "A" && sign == "+")
@@ -61,7 +61,7 @@ class Program
             sign = "F"; //no F+ and F-
         }
 
-        Console.WriteLine($"Your grade is:{letter}{sign}");
+        Console.WriteLine($"Your grade is: {letter}{sign}");
         if (grade >= 70)
         {
             Console.WriteLine("You passed");
