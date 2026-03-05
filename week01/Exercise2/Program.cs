@@ -41,15 +41,15 @@ class Program
 
         if (lastDigit >= 7)
         {
-            sign = "+";
+            sign ="+";
         }
         else if (lastDigit <3)
         {
-            sign = "-";
+            sign ="-";
         }
         else
         {
-            sign = "";
+            sign ="";
         }
         //strech challange:exception F+,F- and A+
         if (letter == "A" && sign == "+")
