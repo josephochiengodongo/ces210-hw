@@ -36,7 +36,7 @@ class Program
             letter="F";
         }
 
-        //strech challege: determine + 
+        //strech challege: determine "+" and "-"
 
         int lastDigit =percent % 10; 
 
