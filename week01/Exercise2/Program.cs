@@ -39,7 +39,7 @@ class Program
         string sign = "";
         int lastDigit =percent % 10;
 
-        if (lastDigit >=7)
+        if (lastDigit >= 7)
         {
             sign = "+";
         }
