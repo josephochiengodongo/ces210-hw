@@ -36,7 +36,7 @@ class Program
         }
 
         //strech challege: determine + and -
-        string sign = "";
+        int sign = "";
         
         int lastDigit =grade % 10;
 
