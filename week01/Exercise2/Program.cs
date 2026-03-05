@@ -35,9 +35,9 @@ class Program
             letter="F";
         }
 
-        //strech challege: determine + and -
-        int sign = "";
-        
+        //strech challege: determine + 
+    an sign = "";
+
         int lastDigit =grade % 10;
 
         if (lastDigit >= 7)
