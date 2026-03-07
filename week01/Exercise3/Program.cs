@@ -7,6 +7,7 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
 
+        //part 1 (no loop)
         Console.Write("What is the margic number?  ");
         int magicNumber = int.Parse(Console.ReadLine());
 
@@ -26,7 +27,37 @@ class Program
             {
                 Console.WriteLine("You guessed it!");
             }
-    }
+            while (guess != magicNumber)
+            {
+              Console.Write("What is your guess?  ");
+              guess = int.Parse(Console.ReadLine()); 
+
+              if (guess < magicNumber)
+            {
+                Console.WriteLine("Higher");
+            }
+            else if(guess > magicNumber)
+            {
+                Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("You nguessed it");
+            }
+
+            }        
+    }        
+
+}   
+
+        
 
     
-}
+
+
+
+    
+
+
+
+
