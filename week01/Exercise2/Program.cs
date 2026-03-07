@@ -58,9 +58,9 @@ class Program
         {
             sign = "";//no A+
         }
-        else if (letter == "F")
+        else 
         {
-            sign = "F"; //no F+ and F-
+            sign = ""; //no F+ and F-
         }
 
         Console.WriteLine($"Your grade is: {letter}{sign}");
