@@ -43,22 +43,42 @@ class Program
             }
             else
             {
-                Console.WriteLine("You nguessed it");
+                Console.WriteLine("You guessed it");
             }
 
-            }        
-    }        
-
-}   
-
+        }     
+        // For Part 3, where we use a random number
+        Random randomGenerator = new Random();
+    
+        magicNumber = randomGenerator.Next(1, 101);
+        Console.Write("What is your guess? ");
+        guess = int.Parse(Console.ReadLine());
         
+        // We could also use a do-while loop here...
+        while (guess != magicNumber)
+        {
+            Console.Write("What is your guess? ");
+            guess = int.Parse(Console.ReadLine());
 
+            if (magicNumber > guess)
+            {
+                Console.WriteLine("Higher");
+            }
+            else if (magicNumber < guess)
+            {
+                Console.WriteLine("Lower");
+            }
+            else
+            {
+                Console.WriteLine("You guessed it!");
+            }
+
+        }                    
+    }
+}
+            
     
 
-
-
+            
     
-
-
-
-
+    
