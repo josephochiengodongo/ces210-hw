@@ -39,7 +39,6 @@ class Program
         Console.WriteLine($"The average is: {average}");
 
         // Part 3: Find the max
-        // There are several ways to do this, such as sorting the list
         
         int max = numbers[0];
 
