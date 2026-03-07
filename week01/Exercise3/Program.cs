@@ -7,7 +7,7 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise3 Project.");
 
-        //part 1 (no loop)
+        //First core (no loop)
         Console.Write("What is the margic number?  ");
         int magicNumber = int.Parse(Console.ReadLine());
 
@@ -47,7 +47,7 @@ class Program
             }
 
         }     
-        // For Part 3, where we use a random number
+        // Third core, where we use a random number
         Random randomGenerator = new Random();
     
         magicNumber = randomGenerator.Next(1, 101);
