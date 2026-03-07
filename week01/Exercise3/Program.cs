@@ -27,6 +27,7 @@ class Program
             {
                 Console.WriteLine("You guessed it!");
             }
+            //second core (loop)
             while (guess != magicNumber)
             {
               Console.Write("What is your guess?  ");
