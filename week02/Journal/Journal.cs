@@ -29,7 +29,7 @@ public class Journal
             }
         }
 
-        Console.WriteLine("Journal saved successfully.");
+        
     }
 
     public void LoadFromFile(string filename)
@@ -50,7 +50,7 @@ public class Journal
             _entries.Add(entry);
         }
 
-        Console.WriteLine("Journal loaded successfully.");
+        
     }
 }
 
