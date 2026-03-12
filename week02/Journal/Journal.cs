@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 
+
 public class Journal
 {
-public List<Entry> _entries;
+public List<Entry> _entries = new List<Entry>();
 
     public void AddEntry(Entry entry)
     {
@@ -27,6 +28,7 @@ public List<Entry> _entries;
             outputFile.WriteLine($"{entry._date}{entry._promptText}{entry._entryText}");
         }  
       }
+      Console.WriteLine("Journal save successfully");
     }
 
     public void LoadFromFile(string filename)
@@ -45,7 +47,8 @@ public List<Entry> _entries;
          entry._entryText = parts[2];
 
          _entries.Add(entry); 
-        }        
+        }
+        Console.WriteLine("Journal loaded successfully");        
         
     }
 }
