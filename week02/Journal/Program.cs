@@ -47,13 +47,15 @@ class Program
             else if (choice == 3)
             {
                 Console.Write("Enter filename: ");
-                journal.SaveToFile(Console.ReadLine());
+                string filename = Console.ReadLine();
+                journal.SaveToFile(filename);
             }
 
             else if (choice == 4)
             {
                 Console.Write("Enter filename: ");
-                journal.LoadFromFile(Console.ReadLine());
+                string filename = Console.ReadLine();
+                journal.LoadFromFile(filename);
             }
         }
     }
