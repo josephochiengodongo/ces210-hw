@@ -23,22 +23,29 @@ class Program
         Console.WriteLine(f3.GetFractionString());
         Console.WriteLine(f3.GetDecimalValue());
 
-        //Another example
-        Fraction f4 = new Fraction(1,3);
+        // Another example
+        Fraction f4 = new Fraction(1, 3);
         Console.WriteLine(f4.GetFractionString());
         Console.WriteLine(f4.GetDecimalValue());
 
+        // Testing setters and getters
+        //Fraction f5 = new Fraction();
+        //f5.SetTop(6);
+       //f5.SetBottom(7);
 
-        //verification of Getters/Setters
-        //Let's change f4 to 1/4 using setters
-        f4.SetTop(1);
-        f4.SetBottom(4);
-        Console.WriteLine($"\n update f4 to: {f4.GetTop()}/{f4.GetBottom}");
+        //Console.WriteLine(f5.GetFractionString());
+       // Console.WriteLine($"Top: {f5.GetTop()}");
+       // Console.WriteLine($"Bottom: {f5.GetBottom()}");
+    }
+}
+
+        
+
+
 
     
 
 
 
 
-    }
-}
+    
