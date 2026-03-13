@@ -29,13 +29,13 @@ class Program
         Console.WriteLine(f4.GetDecimalValue());
 
         // Testing setters and getters
-        //Fraction f5 = new Fraction();
-        //f5.SetTop(6);
-       //f5.SetBottom(7);
+        Fraction f5 = new Fraction();
+        f5.SetTop(6);
+        f5.SetBottom(7);
 
         //Console.WriteLine(f5.GetFractionString());
-       // Console.WriteLine($"Top: {f5.GetTop()}");
-       // Console.WriteLine($"Bottom: {f5.GetBottom()}");
+        Console.WriteLine($"Top: {f5.GetTop()}");
+        Console.WriteLine($"Bottom: {f5.GetBottom()}");
     }
 }
 
