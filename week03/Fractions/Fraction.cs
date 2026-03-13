@@ -4,19 +4,22 @@ public class Fraction
 {
     private int _top;
     private int _bottom;
-
+    
+    //constructor 1: no parameters (default=1/1)   
     public Fraction()
     {
         _top = 1;
         _bottom = 1;
     }
 
+    //Constructor 2: one parameter (denomonator default to 1)
     public Fraction(int top)
     {
         _top = top;
         _bottom = 1;
     }
 
+     // Constructor 3: both top and bottom(parameters) given
     public Fraction(int top, int bottom)
     {
         _top = top;
