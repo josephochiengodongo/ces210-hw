@@ -1,10 +1,10 @@
 //Creativity additions:
 // 1 Seven more additions prompts beyond five reqired added (in PromptGenerator.cs).
 // 2 To handle error in file,I have added- if (!File.Exists(filename))
-//{
-//  Console.WriteLine("file not found")
-//}
-// in public void LoadFromFile(string filename),in Journal.cs file.
+    //{
+    //  Console.WriteLine("file not found")
+    //}
+    // in public void LoadFromFile(string filename),in Journal.cs file.
 
 using System;
 using System.Collections.Generic;
