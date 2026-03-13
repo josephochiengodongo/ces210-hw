@@ -10,7 +10,15 @@ public class PromptGenerator
         "What was the best part of my day?",
         "How did I see the hand of the Lord in my life today?",
         "What was the strongest emotion I felt today?",
-        "If I had one thing I could do over today, what would it be?"
+        "If I had one thing I could do over today, what would it be?",
+        "Did I study my scriptures today?",
+        "Which lesson did I learn in scriptures reading?",
+        "What made me happy today?",
+        "What challenge did I overcome today?",
+        "What am I grateful for today?",
+        "Did I achieve one of my goal today?",
+        "What is one of my goal for tomorrow?"
+
     };
 
     private Random _random = new Random();
