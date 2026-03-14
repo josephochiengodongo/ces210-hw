@@ -13,7 +13,7 @@ public class Scripture
       _words = new List<Word>();
       _random = new Random();
 
-      string[] splitWords = text.Split("");
+      string[] splitWords = text.Split(" ");
 
       foreach (string word in splitWords)
         {
