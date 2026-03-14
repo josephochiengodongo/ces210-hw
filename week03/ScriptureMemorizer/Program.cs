@@ -15,8 +15,11 @@ class Program
             "Trust in the Lord with all thine heart and lean not unto thine own understanding"));
         
         scriptures.Add(new Scripture(
-            new Reference("3Nephi",27,28),"And know ye that ye shall be judges of this people,according to the judgement which I shall give unto you,which shall be just.Therefore what manner of men ought ye to be?Verily I say unto you even as I am."));
+            new Reference("3Nephi",27,27),"And know ye that ye shall be judges of this people,according to the judgement which I shall give unto you,which shall be just.Therefore what manner of men ought ye to be?Verily I say unto you even as I am."));
     
+        scriptures.Add(new Scripture(
+            new Reference("Doctrine and Covenants", 4,2),  
+            "Therefore,O ye that embark in the service of God,see that ye serve him with allyour heart,mind and strength,that ye may stand blameless before God at the last day."));
         scriptures.Add(new Scripture(
             new Reference("Philippians", 4, 13),
             "I can do all things through Christ which strengtheneth me"));
