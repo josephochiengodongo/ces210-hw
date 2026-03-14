@@ -1,14 +1,33 @@
 using System;
+using System.Net.Quic;
 
 class Program
 {
-    static void Main(string[] args)
-    {
+    static void Main(string[] args) 
+    { 
         Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
-        Reference reference = new Reference("Proverbs",3,5,6);
+    
+
+        List<Scripture> scriptures = new List<Scripture>();
+
+        scriptures.Add(new Scripture(
+            new Reference("Proverbs", 3, 5, 6),
+            "Trust in the Lord with all thine heart and lean not unto thine own understanding"));
         
-        Scripture scripture = new Scripture(reference,
-            "Trust in the Lord with all thine heart and lean not unto thine own understanding");
+        scriptures.Add(new Scripture(
+            new Reference("3Nephi",27,28),"And know ye that ye shall be judges of this people,according to the judgement which I shall give unto you,which shall be just.Therefore what manner of men ought ye to be?Verily I say unto you even as I am."));
+    
+        scriptures.Add(new Scripture(
+            new Reference("Philippians", 4, 13),
+            "I can do all things through Christ which strengtheneth me"));
+        
+        scriptures.Add(new Scripture(
+            new Reference("John", 3, 16),
+            "For God so loved the world that he gave his only begotten Son"));
+
+         Random random = new Random();
+
+        Scripture scripture = scriptures[random.Next(scriptures.Count)];
 
         string input = "";
 
