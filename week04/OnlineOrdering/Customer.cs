@@ -1,5 +1,5 @@
 using System;
-using System.Net.Sockets;
+using System.Collections.Generic;
 
 public class Customer
 {
@@ -7,21 +7,23 @@ public class Customer
 
     private Address _address;
 
-    public Customer(string name,Address adress)
+    public Customer(string name, Address address)
     {
         _name = name;
         _address = address;
     }
+
     public bool LivesInUSA()
     {
         return _address.IsUSA();
     }
 
-    public GetShippingLabel()
+    public string GetShippingLabel()
     {
-        return  $"{_name}\n{_address.GetFullAddress()}";
+        return $"{_name}\n{_address.GetFullAddress()}";
     }
 }
+
 
 
     
