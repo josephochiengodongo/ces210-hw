@@ -22,7 +22,9 @@ public class ReflectionActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
-
+    private List<string> _usedPrompts = new List<string>();
+    private List<string> _usedQuestions = new List<string>();
+    private Random _rand = new Random();
     public ReflectionActivity()
         : base(
             "Reflection Activity",
@@ -33,14 +35,42 @@ public class ReflectionActivity : Activity
 
     public string GetRandomPrompt()
     {
-        Random rand = new Random();
-        return _prompts[rand.Next(_prompts.Count)];
-    }
+        if (_usedPrompts.Count == _prompts.Count)
+        {
+            _usedPrompts.Clear();
+        }
 
+        string prompt;
+
+        do
+        {
+            prompt = _prompts[_rand.Next(_prompts.Count)];
+        }
+        while (_usedPrompts.Contains(prompt));
+
+        _usedPrompts.Add(prompt);
+
+        return prompt;
+    }
     public string GetRandomQuestion()
     {
-        Random rand = new Random();
-        return _questions[rand.Next(_questions.Count)];
+        if (_usedQuestions.Count == _questions.Count)
+        {
+            _usedQuestions.Clear();
+        }
+
+        string question;
+
+        do
+        {
+            question = _questions[_rand.Next(_questions.Count)];
+        }
+        while (_usedQuestions.Contains(question));
+
+        _usedQuestions.Add(question);
+
+        return question;
+
     }
 
     public void Run()
