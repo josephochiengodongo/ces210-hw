@@ -1,10 +1,11 @@
 public class ListingActivity : Activity
-{private List<string> _prompts = new List<string>
+{
+    private List<string> _prompts = new List<string>
     {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
-        "When have you felt the Holy Ghost this month?",
         "Who have you helped this week?",
+        "When have you felt the Holy Ghost this month?",
         "Who are your personal heroes?"
     };private int _count;
 
@@ -50,7 +51,6 @@ public class ListingActivity : Activity
 
         DisplayEndingMessage();
     }
-    
+}    
 
 
-}

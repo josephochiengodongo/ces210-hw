@@ -22,9 +22,12 @@ public class ReflectionActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
+
     private List<string> _usedPrompts = new List<string>();
     private List<string> _usedQuestions = new List<string>();
+
     private Random _rand = new Random();
+
     public ReflectionActivity()
         : base(
             "Reflection Activity",
@@ -52,6 +55,7 @@ public class ReflectionActivity : Activity
 
         return prompt;
     }
+
     public string GetRandomQuestion()
     {
         if (_usedQuestions.Count == _questions.Count)
@@ -70,7 +74,6 @@ public class ReflectionActivity : Activity
         _usedQuestions.Add(question);
 
         return question;
-
     }
 
     public void Run()
@@ -80,17 +83,15 @@ public class ReflectionActivity : Activity
         Console.WriteLine("\nConsider the following prompt:");
         Console.WriteLine($"--- {GetRandomPrompt()} ---");
 
-        Console.WriteLine("\nWhen you have something in mind, press Enter.");
+        Console.WriteLine("\nPress Enter when ready.");
         Console.ReadLine();
-
-        Console.WriteLine("Now ponder each of the following questions:");
 
         DateTime endTime = DateTime.Now.AddSeconds(_duration);
 
         while (DateTime.Now < endTime)
         {
             Console.WriteLine($"\n> {GetRandomQuestion()}");
-            ShowSpinner(6);
+            ShowSpinner(5);
         }
 
         DisplayEndingMessage();
