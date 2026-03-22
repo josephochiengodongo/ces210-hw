@@ -29,6 +29,7 @@ public class ListingActivity : Activity
         Console.Write("You may begin in: ");
         ShowCountdown(5);
 
+
         List<string> items = new List<string>();
         DateTime endTime = DateTime.Now.AddSeconds(_duration);
 
