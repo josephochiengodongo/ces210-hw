@@ -33,7 +33,7 @@ public class Activity
 
     public void ShowSpinner(int seconds)
     {
-        string[] spinner = { "|//|\\|", "/", "-", "\\" };
+        string[] spinner = {"|//|\\|"};
 
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
         int i = 0;
@@ -41,7 +41,7 @@ public class Activity
         while (DateTime.Now < endTime)
         {
             Console.Write(spinner[i]);
-            Thread.Sleep(250);
+            Thread.Sleep(500);
             Console.Write("\b \b");
             i = (i + 1) % spinner.Length;
         }
