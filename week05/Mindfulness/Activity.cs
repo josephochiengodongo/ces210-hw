@@ -33,7 +33,7 @@ public class Activity
 
     public void ShowSpinner(int seconds)
     {
-        string[] spinner = { "|", "/", "-", "\\" };
+        string[] spinner = { "|//|\\|", "/", "-", "\\" };
 
         DateTime endTime = DateTime.Now.AddSeconds(seconds);
         int i = 0;
