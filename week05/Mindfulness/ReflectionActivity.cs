@@ -90,7 +90,7 @@ public class ReflectionActivity : Activity
         while (DateTime.Now < endTime)
         {
             Console.WriteLine($"\n> {GetRandomQuestion()}");
-            ShowSpinner(5);
+            ShowSpinner(6);
         }
 
         DisplayEndingMessage();
