@@ -3,6 +3,7 @@ public class ListingActivity : Activity
     {
         "Who are people that you appreciate?",
         "What are personal strengths of yours?",
+        "When have you felt the Holy Ghost this month?",
         "Who have you helped this week?",
         "Who are your personal heroes?"
     };private int _count;
