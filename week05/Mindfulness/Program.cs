@@ -8,7 +8,7 @@ class Program
         Console.WriteLine("Hello World! This is the Mindfulness Project.");
 
         bool running = true;
-
+        int completedActivities = 0;
         while (running)
         {
             Console.Clear();
@@ -26,16 +26,19 @@ class Program
                 case "1":
                     BreathingActivity breathing = new BreathingActivity();
                     breathing.Run();
+                    completedActivities++;
                     break;
 
                 case "2":
                     ReflectionActivity reflection = new ReflectionActivity();
                     reflection.Run();
+                    completedActivities++;
                     break;
 
                 case "3":
                     ListingActivity listing = new ListingActivity();
                     listing.Run();
+                    completedActivities++;
                     break;
 
                 case "4":

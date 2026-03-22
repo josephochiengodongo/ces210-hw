@@ -41,7 +41,7 @@ public class Activity
         while (DateTime.Now < endTime)
         {
             Console.Write(spinner[i]);
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
             Console.Write("\b \b");
             i = (i + 1) % spinner.Length;
         }
@@ -52,7 +52,7 @@ public class Activity
         for (int i = seconds; i > 0; i--)
         {
             Console.Write(i);
-            Thread.Sleep(1000);
+            Thread.Sleep(3000);
             Console.Write("\b \b");
         }
     }
