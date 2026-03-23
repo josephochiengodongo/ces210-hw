@@ -9,6 +9,7 @@ class Program
 
         bool running = true;
         int completedActivities = 0;
+
         while (running)
         {
             Console.Clear();
@@ -20,6 +21,7 @@ class Program
             Console.Write("Select a choice from the menu: ");
 
             string choice = Console.ReadLine();
+            Console.WriteLine($"Activities completed this session: {completedActivities}");
 
             switch (choice)
             {
