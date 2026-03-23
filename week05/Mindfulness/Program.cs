@@ -1,3 +1,11 @@
+// 1 Changes(upgrade) ReflectionActivity:    prompts/questions (random) won't repeate until all random are used.
+//    add:- _usedPrompts : List<string> 
+//          _usedQuestions : List<string>
+// 2 Changes inside (upgrade) ListingActivity: prompt rotates faily.
+// 3 Changes inside Program.cs: To show activity acomplished
+//     addition in class program: int complrtedActivity = 0  
+//                                completedActivities++ (in case 1,2 and 3)
+//                                Console.WriteLine($"Activities completed this session: {completedActivities}");
 using System;
 using System.Collections.Generic;
 
