@@ -18,11 +18,12 @@ class Program
             Console.WriteLine("  2. Start reflection activity");
             Console.WriteLine("  3. Start listing activity");
             Console.WriteLine("  4. Quit");
+            Console.WriteLine();
+            Console.WriteLine($"Activities completed this session: {completedActivities}");
             Console.Write("Select a choice from the menu: ");
 
             string choice = Console.ReadLine();
-            Console.WriteLine($"Activities completed this session: {completedActivities}");
-
+            
             switch (choice)
             {
                 case "1":
