@@ -1,5 +1,5 @@
 using System;                                                                                                                                                         
-public class ReflectionActivity : Activity
+public class ReflectingActivity : Activity
 
 {
     private List<string> _prompts = new List<string>
@@ -28,7 +28,7 @@ public class ReflectionActivity : Activity
 
     private Random _rand = new Random();
 
-    public ReflectionActivity()
+    public ReflectingActivity()
         : base(
             "Reflection Activity",
             "This activity will help you reflect on times in your life when you have shown strength and resilience."

@@ -1,4 +1,4 @@
-// 1- Changes(upgrade) ReflectionActivity:    prompts/questions (random) won't repeate until all random are used.
+// 1- Changes(upgrade) ReflectingActivity:    prompts/questions (random) won't repeate until all random are used.
 //    add:- _usedPrompts : List<string> 
 //          _usedQuestions : List<string>
 // 2- Changes inside (upgrade) ListingActivity: prompt rotates faily.
@@ -43,7 +43,7 @@ class Program
                     break;
 
                 case "2":
-                    ReflectionActivity reflection = new ReflectionActivity();
+                    ReflectingActivity reflection = new ReflectingActivity();
                     reflection.Run();
                     completedActivities++;
                     break;
