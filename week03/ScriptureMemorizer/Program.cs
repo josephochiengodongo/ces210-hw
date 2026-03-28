@@ -1,5 +1,8 @@
 //Creativity
 //add scriptures as follows:3Nephi 27:27,Doctrine and Covenanants 4:2,Philippians 4:13 and John3:16
+
+
+
 using System;
 using System.Net.Quic;
 
