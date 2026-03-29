@@ -115,52 +115,40 @@ public class GoalManager
                 output.WriteLine(goal.GetStringRepresentation());
             }
         }
-    }
+    }public void LoadGoals()
+{
+    string filename = "mygoals.txt";
+    string[] lines = File.ReadAllLines(filename);
 
-    public void LoadGoals()
-    { 
-        string[] lines = File.ReadAllLines("mygoals.txt");
+    _score = int.Parse(lines[0]);
+    _goals.Clear();
 
-        _score = int.Parse(lines[0]);
-        _goals.Clear();
+    for (int i = 1; i < lines.Length; i++)
+    {
+        string line = lines[i];
 
-        for (int i = 1; i < lines.Length; i++)
+        string[] parts = line.Split(":");
+        string goalType = parts[0];
+
+        string[] data = parts[1].Split(",");
+
+        if (goalType == "SimpleGoal")
         {
-            string line = lines[i];
-            string[] parts = line.Split(":");
-
-            string type = parts[0];
-            string[] data = parts[1].Split(",");
-
-            if (type == "SimpleGoal")
-            {
-                _goals.Add(new SimpleGoal(
-                    data[0],
-                    data[1],
-                    int.Parse(data[2]),
-                    bool.Parse(data[3])
-                ));
-            }
-            else if (type == "EternalGoal")
-            {
-                _goals.Add(new EternalGoal(
-                    data[0],
-                    data[1],
-                    int.Parse(data[2])
-                ));
-            }
-            else if (type == "ChecklistGoal")
-            {
-                _goals.Add(new ChecklistGoal(
-                    data[0],
-                    data[1],
-                    int.Parse(data[2]),
-                    int.Parse(data[4]),
-                    int.Parse(data[3]),
-                    int.Parse(data[5])
-                ));
-            }
+            _goals.Add(new SimpleGoal(
+                data[0],
+                data[1],
+                int.Parse(data[2]),
+                bool.Parse(data[3])
+            ));
         }
     }
 }
 
+
+
+
+
+
+
+
+}
