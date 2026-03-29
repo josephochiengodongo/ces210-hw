@@ -1,4 +1,4 @@
-//Added part of program: ReturdGoal.cs
+//Added part of program: ReturdGoal.cs(meaning nagative purformance)
 //      -Changes in GoalManager through private void CreateGoal()
 //           Console.WriteLine("4. Returd Goal")
 //      -Changes in GoalManager through private void RecordEvent()
