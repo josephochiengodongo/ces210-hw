@@ -40,7 +40,7 @@ public class GoalManager
 
     public void DisplayPlayerInfo()
     {
-        Console.WriteLine($"You have {_score}points");
+        Console.WriteLine($"Score: {_score}");
     }
 
     public void ListGoalDetails()
@@ -83,7 +83,7 @@ public class GoalManager
             Console.Write("Target count: ");
             int target = int.Parse(Console.ReadLine());
 
-            Console.Write("Bonus: ");
+            Console.Write("You have earned bonus: ");
             int bonus = int.Parse(Console.ReadLine());
 
             _goals.Add(new ChecklistGoal(name, desc, points, target, bonus));
@@ -94,7 +94,7 @@ public class GoalManager
     {
         ListGoalDetails();
 
-        Console.Write("Which goal completed? ");
+        Console.Write("Which goal is completed? ");
         int index = int.Parse(Console.ReadLine()) - 1;
 
         int earned = _goals[index].RecordEvent();
@@ -116,40 +116,34 @@ public class GoalManager
             }
         }
     }
+    
     public void LoadGoals()
-   {
+    {
         string filename = "mygoals.txt";
         string[] lines = File.ReadAllLines(filename);
 
         _score = int.Parse(lines[0]);
         _goals.Clear();
 
-    for (int i = 1; i < lines.Length; i++)
-    {
-        string line = lines[i];
-
-        string[] parts = line.Split(":");
-        string goalType = parts[0];
-
-        string[] data = parts[1].Split(",");
-
-        if (goalType == "SimpleGoal")
+        for (int i = 1; i < lines.Length; i++)
         {
-            _goals.Add(new SimpleGoal(
-                data[0],
-                data[1],
-                int.Parse(data[2]),
-                bool.Parse(data[3])
-            ));
+            string line = lines[i];
+
+            string[] parts = line.Split(":");
+            string goalType = parts[0];
+
+            string[] data = parts[1].Split(",");
+
+            if (goalType == "SimpleGoal")
+            {
+                _goals.Add(new SimpleGoal(
+                    data[0],
+                    data[1],
+                    int.Parse(data[2]),
+                    bool.Parse(data[3])
+                ));
+            }
         }
     }
-}
-
-
-
-
-
-
-
 
 }
