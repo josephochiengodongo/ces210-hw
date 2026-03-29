@@ -115,13 +115,14 @@ public class GoalManager
                 output.WriteLine(goal.GetStringRepresentation());
             }
         }
-    }public void LoadGoals()
-{
-    string filename = "mygoals.txt";
-    string[] lines = File.ReadAllLines(filename);
+    }
+    public void LoadGoals()
+   {
+        string filename = "mygoals.txt";
+        string[] lines = File.ReadAllLines(filename);
 
-    _score = int.Parse(lines[0]);
-    _goals.Clear();
+        _score = int.Parse(lines[0]);
+        _goals.Clear();
 
     for (int i = 1; i < lines.Length; i++)
     {
