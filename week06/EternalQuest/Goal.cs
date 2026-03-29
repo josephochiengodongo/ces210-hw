@@ -19,7 +19,7 @@ public abstract class Goal
     return $"{status} {_name} ({_description})";
 }
 
-   public abstract string GetStringReprestation();
+   public abstract string GetStringRepresentation();
 }
 
 
