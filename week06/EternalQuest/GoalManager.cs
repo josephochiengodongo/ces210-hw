@@ -58,6 +58,7 @@ public class GoalManager
         Console.WriteLine("1. Simple Goal");
         Console.WriteLine("2. Eternal Goal");
         Console.WriteLine("3. Checklist Goal");
+        Console.WriteLine("4. Returd Goal");
 
         string type = Console.ReadLine();
 
@@ -99,6 +100,11 @@ public class GoalManager
 
         int earned = _goals[index].RecordEvent();
         _score += earned;
+        if (_score < 0)
+        {
+             _score = 0;
+        }
+
 
         Console.WriteLine($"Earned {earned} points!");
         Console.ReadLine();
