@@ -106,7 +106,7 @@ public class GoalManager
 
     public void SaveGoals()
     {
-        using (StreamWriter output = new StreamWriter("goals.txt"))
+        using (StreamWriter output = new StreamWriter("mygoals.txt"))
         {
             output.WriteLine(_score);
 
@@ -118,8 +118,8 @@ public class GoalManager
     }
 
     public void LoadGoals()
-    {
-        string[] lines = File.ReadAllLines("goals.txt");
+    { 
+        string[] lines = File.ReadAllLines("mygoals.txt");
 
         _score = int.Parse(lines[0]);
         _goals.Clear();
