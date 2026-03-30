@@ -8,7 +8,7 @@
 //                {
 //                  _Score =+ 0
 //                }
- //      -Addition in GoalManager.cs through private void LoadGoals()
+ //     -Addition in GoalManager.cs through private void LoadGoals()
  //               else if (goalType == "ReturdGoal")   
         
 

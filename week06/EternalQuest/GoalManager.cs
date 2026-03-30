@@ -6,6 +6,27 @@ public class GoalManager
 {
     private List<Goal> _goals = new List<Goal>();
     private int _score = 0;
+    private int _completedGoals = 0;
+    private int _GetLevel = 0;
+    private string GetLevel()
+    {
+        if (_score >= 500)
+        {
+            return "Master";
+        }
+        else if (_score >= 300)
+        {
+            return "Expert";
+        }
+        else if (_score >= 100)
+        {
+            return "Intermediate";
+        }
+        else
+        {
+            return "Beginner";
+        }
+    }
 
     public void Start()
     {
@@ -41,6 +62,8 @@ public class GoalManager
     public void DisplayPlayerInfo()
     {
         Console.WriteLine($"Score: {_score}");
+        Console.WriteLine($"Level: {_GetLevel}");
+        Console.WriteLine($"Completed Goals: {_completedGoals}");
     }
 
     public void ListGoalDetails()
@@ -104,12 +127,20 @@ public class GoalManager
 
         int earned = _goals[index].RecordEvent();
         _score += earned;
+        if (earned > 0)
+        {
+            _completedGoals++;
+        }
+        if(_completedGoals % 3 == 0)
+        {
+            Console.WriteLine("Congratulations! You've completed 3 goals and earned a bonus of 50 points!");
+            _score += 50;
+        }
         if (_score < 0)
         {
              _score = 0;
+             
         }
-
-
         Console.WriteLine($"Earned {earned} points!");
         Console.ReadLine();
     }
@@ -185,8 +216,3 @@ public class GoalManager
 }
 
                 
-        
-    
-    
-
-
