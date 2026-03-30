@@ -91,7 +91,7 @@ public class GoalManager
         }
         else if (type == "4")
         {
-            _goals.Add(new ReturdGoal(name,desc,points));
+            _goals.Add(new NegativeGoal(name,desc,points));
         }
     }
 
@@ -163,7 +163,7 @@ public class GoalManager
             }
             else if (goalType == "ReturdGoal")
             {
-                _goals.Add(new ReturdGoal(
+                _goals.Add(new NegativeGoal(
                     data[0],
                     data[1],
                     int.Parse(data[2])

@@ -1,8 +1,8 @@
-public class ReturdGoal : Goal
+public class NegativeGoal : Goal
 
 {
 
-    public ReturdGoal(string name, string description, int points)
+    public NegativeGoal(string name, string description, int points)
         : base(name, description, points)
     {
     }
