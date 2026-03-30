@@ -89,6 +89,10 @@ public class GoalManager
 
             _goals.Add(new ChecklistGoal(name, desc, points, target, bonus));
         }
+        else if (type == "4")
+        {
+            _goals.Add(new ReturdGoal(name,desc,points));
+        }
     }
 
     public void RecordEvent()
@@ -148,8 +152,41 @@ public class GoalManager
                     int.Parse(data[2]),
                     bool.Parse(data[3])
                 ));
+            }   
+            else if (goalType == "EternalGoal")
+            {
+                _goals.Add(new EternalGoal(
+                    data[0],
+                    data[1],
+                    int.Parse(data[2])
+                ));
+            }
+            else if (goalType == "ReturdGoal")
+            {
+                _goals.Add(new ReturdGoal(
+                    data[0],
+                    data[1],
+                    int.Parse(data[2])
+                ));
+            }
+            else if (goalType == "ChecklistGoal")
+            {
+                _goals.Add(new ChecklistGoal(
+                    data[0],
+                    data[1],
+                    int.Parse(data[2]),
+                    int.Parse(data[4]),
+                    int.Parse(data[3]),
+                    int.Parse(data[5])
+                ));
             }
         }
     }
-
 }
+
+                
+        
+    
+    
+
+

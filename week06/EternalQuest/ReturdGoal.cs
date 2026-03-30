@@ -1,5 +1,7 @@
 public class ReturdGoal : Goal
+
 {
+
     public ReturdGoal(string name, string description, int points)
         : base(name, description, points)
     {

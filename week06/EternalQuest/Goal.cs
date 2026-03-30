@@ -14,43 +14,10 @@ public abstract class Goal
 
     public abstract bool IsComplete();
     public virtual string GetDetailsString()
-{
+    {
     string status = IsComplete() ? "[X]" : "[ ]";
     return $"{status} {_name} ({_description})";
-}
+    }
 
    public abstract string GetStringRepresentation();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    
-    
-
-
