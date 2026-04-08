@@ -7,7 +7,6 @@ public class GoalManager
     private List<Goal> _goals = new List<Goal>();
     private int _score = 0;
     private int _completedGoals = 0;
-    private int _GetLevel = 0;
     private string GetLevel()
     {
         if (_score >= 500)
@@ -62,7 +61,7 @@ public class GoalManager
     public void DisplayPlayerInfo()
     {
         Console.WriteLine($"Score: {_score}");
-        Console.WriteLine($"Level: {_GetLevel}");
+        Console.WriteLine($"Level: {GetLevel()}");
         Console.WriteLine($"Completed Goals: {_completedGoals}");
     }
 
@@ -147,7 +146,7 @@ public class GoalManager
 
     public void SaveGoals()
     {
-        using (StreamWriter output = new StreamWriter("mygoals.txt"))
+        using (StreamWriter output = new StreamWriter("myfiles.txt"))
         {
             output.WriteLine(_score);
 
@@ -192,7 +191,7 @@ public class GoalManager
                     int.Parse(data[2])
                 ));
             }
-            else if (goalType == "ReturdGoal")
+            else if (goalType == "NegativeGoal")
             {
                 _goals.Add(new NegativeGoal(
                     data[0],
