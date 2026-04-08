@@ -160,7 +160,7 @@ public class GoalManager
     
     public void LoadGoals()
     {
-        string filename = "mygoals.txt";
+        string filename = "myfiles.txt";
         string[] lines = File.ReadAllLines(filename);
 
         _score = int.Parse(lines[0]);
