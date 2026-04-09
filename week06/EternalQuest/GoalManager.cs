@@ -178,10 +178,10 @@ public class GoalManager
         {
             string line = lines[i];
 
-            string[] parts = line.Split(":");
+            string[] parts = line.Split (':',2);
             string goalType = parts[0];
 
-            string[] data = parts[1].Split(",");
+            string[] data = parts[1].Split(':');
 
             if (goalType == "SimpleGoal")
             {
