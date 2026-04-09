@@ -173,42 +173,31 @@ public class GoalManager
 
         _score = int.Parse(lines[0]);
         _goals.Clear();
-
         for (int i = 1; i < lines.Length; i++)
         {
             string line = lines[i];
 
-            string[] parts = line.Split (':',2);
+            string[] parts = line.Split(':', 2);
+
+            if (parts.Length < 2) continue;
+
             string goalType = parts[0];
+            string[] data = parts[1].Split(',');
+            Console.WriteLine(line);
 
-            string[] data = parts[1].Split(':');
-
-            if (goalType == "SimpleGoal")
+            if (goalType == "SimpleGoal" && data.Length >= 4)
             {
-                _goals.Add(new SimpleGoal(
-                    data[0],
-                    data[1],
-                    int.Parse(data[2]),
-                    bool.Parse(data[3])
-                ));
-            }   
-            else if (goalType == "EternalGoal")
-            {
-                _goals.Add(new EternalGoal(
-                    data[0],
-                    data[1],
-                    int.Parse(data[2])
-                ));
+                _goals.Add(new SimpleGoal(data[0], data[1], int.Parse(data[2]), bool.Parse(data[3])));
             }
-            else if (goalType == "NegativeGoal")
+            else if (goalType == "EternalGoal" && data.Length >= 3)
             {
-                _goals.Add(new NegativeGoal(
-                    data[0],
-                    data[1],
-                    int.Parse(data[2])
-                ));
+                _goals.Add(new EternalGoal(data[0], data[1], int.Parse(data[2])));
             }
-            else if (goalType == "ChecklistGoal")
+            else if (goalType == "NegativeGoal" && data.Length >= 3)
+            {
+                _goals.Add(new NegativeGoal(data[0], data[1], int.Parse(data[2])));
+            }
+            else if (goalType == "ChecklistGoal" && data.Length >= 6)
             {
                 _goals.Add(new ChecklistGoal(
                     data[0],
@@ -217,14 +206,14 @@ public class GoalManager
                     int.Parse(data[4]),
                     int.Parse(data[3]),
                     int.Parse(data[5])
-                ));
+              ));
             }
         }
     Console.WriteLine("Loaded successfully!");
     Console.ReadLine();
     }
-}
     
+}
 
 
-                
+       
