@@ -116,34 +116,49 @@ public class GoalManager
             _goals.Add(new NegativeGoal(name,desc,points));
         }
     }
-
     public void RecordEvent()
     {
+        if (_goals.Count == 0)
+        {
+            Console.WriteLine("No goals to record. Create one first!");
+            Console.ReadLine();
+            return;
+        }
         ListGoalDetails();
+        Console.Write("Which goal did you perform? ");
+    
+        if (int.TryParse(Console.ReadLine(), out int choice))
+        {
+            int index = choice - 1;
 
-        Console.Write("Which goal is completed? ");
-        int index = int.Parse(Console.ReadLine()) - 1;
+            if (index >= 0 && index < _goals.Count)
+            {
+                int earned = _goals[index].RecordEvent();
+                _score += earned;
 
-        int earned = _goals[index].RecordEvent();
-        _score += earned;
-        if (earned > 0)
-        {
-            _completedGoals++;
+                if (earned > 0)
+                {
+                    _completedGoals++;
+                }
+
+            // Leveling/Bonus Logic
+                if (_completedGoals > 0 && _completedGoals % 3 == 0)
+                {
+                    Console.WriteLine("Bonus! 50 points for every 3 successful goals!");
+                    _score += 50;
+                }
+
+                if (_score < 0) _score = 0;
+                Console.WriteLine($"Earned {earned} points! Total Score: {_score}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid goal number.");
+            }
         }
-        if(_completedGoals % 3 == 0)
-        {
-            Console.WriteLine("Congratulations! You've completed 3 goals and earned a bonus of 50 points!");
-            _score += 50;
-        }
-        if (_score < 0)
-        {
-             _score = 0;
-             
-        }
-        Console.WriteLine($"Earned {earned} points!");
-        Console.ReadLine();
+    
+    Console.ReadLine();
     }
-
     public void SaveGoals()
     {
         using (StreamWriter output = new StreamWriter("myfiles.txt"))
@@ -209,7 +224,7 @@ public class GoalManager
               ));
             }
         }
-    Console.WriteLine("Loaded successfully!");
+
     Console.ReadLine();
     }
     
