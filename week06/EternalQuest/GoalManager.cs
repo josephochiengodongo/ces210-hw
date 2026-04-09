@@ -155,11 +155,20 @@ public class GoalManager
                 output.WriteLine(goal.GetStringRepresentation());
             }
         }
+    Console.WriteLine("Saved successfully!");
+    Console.ReadLine();
+
     }
     
     public void LoadGoals()
     {
         string filename = "myfiles.txt";
+        if (!File.Exists(filename))
+        {
+        Console.WriteLine("Save file not found.");
+        Console.ReadLine();
+        return;
+        }
         string[] lines = File.ReadAllLines(filename);
 
         _score = int.Parse(lines[0]);
@@ -211,7 +220,11 @@ public class GoalManager
                 ));
             }
         }
+    Console.WriteLine("Loaded successfully!");
+    Console.ReadLine();
     }
 }
+    
+
 
                 
