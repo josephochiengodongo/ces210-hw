@@ -1,6 +1,6 @@
 public class Running : Activity
 {
-     private double _distance;
+    private double _distance;
 
     public Running(string date, int minutes, double distance)
         : base(date, minutes)
@@ -23,4 +23,3 @@ public class Running : Activity
         return GetMinutes() / _distance;
     }
 }
-    
