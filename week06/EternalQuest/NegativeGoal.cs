@@ -8,7 +8,7 @@ public class NegativeGoal : Goal
     public override int RecordEvent()
     {
         // This returns a negative value to subtract from the score
-        return -_points; 
+        return -_points;
     }
 
     public override bool IsComplete()
@@ -30,4 +30,3 @@ public class NegativeGoal : Goal
 
 
 
-    
