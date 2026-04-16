@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the ExerciseTrackingusing System.");
+        Console.WriteLine("Hello World! This is the ExerciseTracking using System.");
         List<Activity> activities = new List<Activity>();
 
         activities.Add(new Running("03 Nov 2022", 30, 4.8));
