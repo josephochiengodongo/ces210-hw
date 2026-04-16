@@ -1,4 +1,3 @@
-
 public abstract class Goal
 {
     protected string _name;
@@ -17,7 +16,7 @@ public abstract class Goal
 
     public virtual string GetDetailsString()
     {
-    
+
         string status = IsComplete() ? "[X]" : "[ ]";
         return $"{status} {_name} ({_description})";
     }
