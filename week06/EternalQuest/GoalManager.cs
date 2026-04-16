@@ -113,7 +113,7 @@ public class GoalManager
         }
         else if (type == "4")
         {
-            _goals.Add(new NegativeGoal(name,desc,points));
+            _goals.Add(new NegativeGoal(name, desc, points));
         }
     }
     public void RecordEvent()
@@ -126,7 +126,7 @@ public class GoalManager
         }
         ListGoalDetails();
         Console.Write("Which goal did you perform? ");
-    
+
         if (int.TryParse(Console.ReadLine(), out int choice))
         {
             int index = choice - 1;
@@ -141,7 +141,7 @@ public class GoalManager
                     _completedGoals++;
                 }
 
-            // Leveling/Bonus Logic
+                // Leveling/Bonus Logic
                 if (_completedGoals > 0 && _completedGoals % 3 == 0)
                 {
                     Console.WriteLine("Bonus! 50 points for every 3 successful goals!");
@@ -156,8 +156,8 @@ public class GoalManager
                 Console.WriteLine("Invalid goal number.");
             }
         }
-    
-    Console.ReadLine();
+
+        Console.ReadLine();
     }
     public void SaveGoals()
     {
@@ -170,19 +170,19 @@ public class GoalManager
                 output.WriteLine(goal.GetStringRepresentation());
             }
         }
-    Console.WriteLine("Saved successfully!");
-    Console.ReadLine();
+        Console.WriteLine("Saved successfully!");
+        Console.ReadLine();
 
     }
-    
+
     public void LoadGoals()
     {
         string filename = "myfiles.txt";
         if (!File.Exists(filename))
         {
-        Console.WriteLine("Save file not found.");
-        Console.ReadLine();
-        return;
+            Console.WriteLine("Save file not found.");
+            Console.ReadLine();
+            return;
         }
         string[] lines = File.ReadAllLines(filename);
 
@@ -225,10 +225,9 @@ public class GoalManager
             }
         }
 
-    Console.ReadLine();
+        Console.ReadLine();
     }
-    
+
 }
 
 
-       
